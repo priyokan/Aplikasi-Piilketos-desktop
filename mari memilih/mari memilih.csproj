@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3714AB27-BC3E-4D37-AC33-325E53BED6EC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>mari_memilih</RootNamespace>
+    <AssemblyName>mari memilih</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataClasses1.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="dataKandidat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dataKandidat.Designer.cs">
+      <DependentUpon>dataKandidat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dataPemilih.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dataPemilih.Designer.cs">
+      <DependentUpon>dataPemilih.cs</DependentUpon>
+    </Compile>
+    <Compile Include="detailPilihan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="detailPilihan.Designer.cs">
+      <DependentUpon>detailPilihan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPilihan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPilihan.Designer.cs">
+      <DependentUpon>frmPilihan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FromDataUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FromDataUser.Designer.cs">
+      <DependentUpon>FromDataUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hasilPemilihan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hasilPemilihan.Designer.cs">
+      <DependentUpon>hasilPemilihan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="loginPemilih.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loginPemilih.Designer.cs">
+      <DependentUpon>loginPemilih.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pilketosDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pilketosDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WellcomeAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WellcomeAdmin.Designer.cs">
+      <DependentUpon>WellcomeAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="wellcomePemilih.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="wellcomePemilih.Designer.cs">
+      <DependentUpon>wellcomePemilih.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="dataKandidat.resx">
+      <DependentUpon>dataKandidat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dataPemilih.resx">
+      <DependentUpon>dataPemilih.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="detailPilihan.resx">
+      <DependentUpon>detailPilihan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPilihan.resx">
+      <DependentUpon>frmPilihan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FromDataUser.resx">
+      <DependentUpon>FromDataUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hasilPemilihan.resx">
+      <DependentUpon>hasilPemilihan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loginPemilih.resx">
+      <DependentUpon>loginPemilih.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="WellcomeAdmin.resx">
+      <DependentUpon>WellcomeAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wellcomePemilih.resx">
+      <DependentUpon>wellcomePemilih.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataClasses1.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClasses1.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataClasses1.dbml.layout">
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </None>
+    <None Include="pilketosDataSet.xsc">
+      <DependentUpon>pilketosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="pilketosDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pilketosDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pilketosDataSet.xss">
+      <DependentUpon>pilketosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_2_filled_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circled_chevron_left_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo smk3.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
