@@ -43,7 +43,7 @@
             this.BtnHasilPemilihanCepat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnHasilPemilihanCepat.Font = new System.Drawing.Font("Yu Gothic UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnHasilPemilihanCepat.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnHasilPemilihanCepat.Location = new System.Drawing.Point(381, 349);
+            this.BtnHasilPemilihanCepat.Location = new System.Drawing.Point(394, 349);
             this.BtnHasilPemilihanCepat.Name = "BtnHasilPemilihanCepat";
             this.BtnHasilPemilihanCepat.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.BtnHasilPemilihanCepat.Size = new System.Drawing.Size(246, 55);
