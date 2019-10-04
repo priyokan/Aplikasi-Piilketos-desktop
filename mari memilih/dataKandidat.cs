@@ -35,13 +35,14 @@ namespace mari_memilih
             btnedit.Enabled = false;
             btnhapus.Enabled = false;
 
-            // TODO: This line of code loads data into the 'pilketosDataSet.kandidat' table. You can move, or remove it, as needed.
-            this.kandidatTableAdapter.Fill(this.pilketosDataSet.kandidat);
             PanelMenu.Visible = false;
+            // TODO: This line of code loads data into the 'pilketosDataSet1.kandidat' table. You can move, or remove it, as needed.
+            this.kandidatTableAdapter.Fill(this.pilketosDataSet1.kandidat);
         }
 
         private void DataKandidat_Load(object sender, EventArgs e)
         {
+          
             loadAll();
             
         }
@@ -85,10 +86,11 @@ namespace mari_memilih
         int id;
         private void Btntambah_Click(object sender, EventArgs e)
         {
-            if(txtNama.Text !=""&&txtvisi.Text != "" && txtMisi.Text != ""&&foto.Image!=null)
+            if(txtNama.Text !=""&&txtvisi.Text != "" && txtMisi.Text != ""&&foto.Image!=null && comboBox1.Text != "")
             {
                 kandidat kand = new kandidat();
                 kand.Nama = txtNama.Text;
+                kand.Kelas = comboBox1.Text;
                 kand.Visi = txtvisi.Text;
                 kand.Misi = txtMisi.Text;
                 MemoryStream ms = new MemoryStream();
@@ -103,10 +105,11 @@ namespace mari_memilih
 
         private void Btnedit_Click(object sender, EventArgs e)
         {
-            if (txtNama.Text != "" && txtvisi.Text != "" && txtMisi.Text != "" && foto.Image != null)
+            if (txtNama.Text != "" && txtvisi.Text != "" && txtMisi.Text != "" && foto.Image != null && comboBox1.Text!="")
             {
                 kandidat kand = new kandidat();
                 kand = db.kandidats.Single(x => x.id == id);
+                kand.Kelas = comboBox1.Text;
                 kand.Nama = txtNama.Text;
                 kand.Visi = txtvisi.Text;
                 kand.Misi = txtMisi.Text;
@@ -189,6 +192,13 @@ namespace mari_memilih
             login.Show();
             this.Close();
 
+        }
+
+        private void ComboBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+           if (!char.IsControl(e.KeyChar)){
+                e.Handled = true;
+            }
         }
     }
 }

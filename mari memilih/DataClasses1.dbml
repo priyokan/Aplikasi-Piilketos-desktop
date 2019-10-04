@@ -22,6 +22,7 @@
       <Column Name="Misi" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
       <Column Name="Foto" Type="System.Data.Linq.Binary" DbType="Image NOT NULL" CanBeNull="false" UpdateCheck="Never" />
       <Column Name="Suara" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Kelas" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

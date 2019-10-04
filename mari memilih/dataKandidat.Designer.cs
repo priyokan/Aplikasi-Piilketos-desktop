@@ -29,8 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PanelMenu = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
@@ -39,6 +40,7 @@
             this.btndataPemilih = new System.Windows.Forms.Button();
             this.btnDataUSer = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -56,28 +58,33 @@
             this.btnedit = new System.Windows.Forms.Button();
             this.btnhapus = new System.Windows.Forms.Button();
             this.foto = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.pilketosDataSet = new mari_memilih.pilketosDataSet();
-            this.kandidatBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.kandidatTableAdapter = new mari_memilih.pilketosDataSetTableAdapters.kandidatTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.namaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.visiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.misiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fotoDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.suaraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kelasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kandidatBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pilketosDataSet1 = new mari_memilih.pilketosDataSet1();
+            this.kandidatTableAdapter = new mari_memilih.pilketosDataSet1TableAdapters.kandidatTableAdapter();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.PanelMenu.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.foto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pilketosDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kandidatBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pilketosDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -88,6 +95,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1038, 41);
             this.panel1.TabIndex = 3;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::mari_memilih.Properties.Resources.menu_2_filled_50px;
+            this.pictureBox1.Location = new System.Drawing.Point(-28, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(104, 25);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
             // 
             // PanelMenu
             // 
@@ -203,6 +221,17 @@
             this.panel3.Size = new System.Drawing.Size(261, 41);
             this.panel3.TabIndex = 2;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::mari_memilih.Properties.Resources.circled_chevron_left_50px;
+            this.pictureBox2.Location = new System.Drawing.Point(-28, 6);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(104, 25);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.PictureBox2_Click);
+            // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.SteelBlue;
@@ -239,7 +268,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Yu Gothic UI Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label3.Location = new System.Drawing.Point(365, 208);
+            this.label3.Location = new System.Drawing.Point(365, 178);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 20);
             this.label3.TabIndex = 11;
@@ -252,7 +281,7 @@
             this.txtNama.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNama.Font = new System.Drawing.Font("Yu Gothic UI Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNama.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.txtNama.Location = new System.Drawing.Point(438, 208);
+            this.txtNama.Location = new System.Drawing.Point(438, 178);
             this.txtNama.Name = "txtNama";
             this.txtNama.Size = new System.Drawing.Size(190, 20);
             this.txtNama.TabIndex = 12;
@@ -263,7 +292,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Yu Gothic UI Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label4.Location = new System.Drawing.Point(639, 208);
+            this.label4.Location = new System.Drawing.Point(639, 178);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(30, 20);
             this.label4.TabIndex = 14;
@@ -276,9 +305,10 @@
             this.txtvisi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtvisi.Font = new System.Drawing.Font("Yu Gothic UI Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtvisi.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.txtvisi.Location = new System.Drawing.Point(675, 206);
+            this.txtvisi.Location = new System.Drawing.Point(675, 176);
             this.txtvisi.Multiline = true;
             this.txtvisi.Name = "txtvisi";
+            this.txtvisi.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txtvisi.Size = new System.Drawing.Size(339, 169);
             this.txtvisi.TabIndex = 15;
             this.txtvisi.TextChanged += new System.EventHandler(this.TextBox2_TextChanged);
@@ -286,7 +316,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel5.Location = new System.Drawing.Point(438, 227);
+            this.panel5.Location = new System.Drawing.Point(438, 197);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(190, 3);
             this.panel5.TabIndex = 10;
@@ -297,7 +327,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Yu Gothic UI Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Location = new System.Drawing.Point(639, 383);
+            this.label1.Location = new System.Drawing.Point(639, 353);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(34, 20);
             this.label1.TabIndex = 17;
@@ -309,10 +339,11 @@
             this.txtMisi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMisi.Font = new System.Drawing.Font("Yu Gothic UI Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMisi.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.txtMisi.Location = new System.Drawing.Point(675, 381);
+            this.txtMisi.Location = new System.Drawing.Point(675, 351);
             this.txtMisi.Multiline = true;
             this.txtMisi.Name = "txtMisi";
-            this.txtMisi.Size = new System.Drawing.Size(339, 133);
+            this.txtMisi.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtMisi.Size = new System.Drawing.Size(339, 163);
             this.txtMisi.TabIndex = 18;
             // 
             // label2
@@ -403,28 +434,6 @@
             this.foto.TabIndex = 8;
             this.foto.TabStop = false;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::mari_memilih.Properties.Resources.circled_chevron_left_50px;
-            this.pictureBox2.Location = new System.Drawing.Point(-28, 6);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(104, 25);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.PictureBox2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::mari_memilih.Properties.Resources.menu_2_filled_50px;
-            this.pictureBox1.Location = new System.Drawing.Point(-28, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(104, 25);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
-            // 
             // dataGridView2
             // 
             this.dataGridView2.AllowUserToAddRows = false;
@@ -434,14 +443,14 @@
             this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
@@ -449,7 +458,8 @@
             this.visiDataGridViewTextBoxColumn,
             this.misiDataGridViewTextBoxColumn,
             this.fotoDataGridViewImageColumn,
-            this.suaraDataGridViewTextBoxColumn});
+            this.suaraDataGridViewTextBoxColumn,
+            this.kelasDataGridViewTextBoxColumn});
             this.dataGridView2.DataSource = this.kandidatBindingSource;
             this.dataGridView2.EnableHeadersVisualStyles = false;
             this.dataGridView2.Location = new System.Drawing.Point(31, 198);
@@ -459,20 +469,6 @@
             this.dataGridView2.Size = new System.Drawing.Size(328, 316);
             this.dataGridView2.TabIndex = 49;
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView2_CellClick);
-            // 
-            // pilketosDataSet
-            // 
-            this.pilketosDataSet.DataSetName = "pilketosDataSet";
-            this.pilketosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // kandidatBindingSource
-            // 
-            this.kandidatBindingSource.DataMember = "kandidat";
-            this.kandidatBindingSource.DataSource = this.pilketosDataSet;
-            // 
-            // kandidatTableAdapter
-            // 
-            this.kandidatTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -493,7 +489,6 @@
             // 
             // visiDataGridViewTextBoxColumn
             // 
-            this.visiDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.visiDataGridViewTextBoxColumn.DataPropertyName = "Visi";
             this.visiDataGridViewTextBoxColumn.HeaderText = "Visi";
             this.visiDataGridViewTextBoxColumn.Name = "visiDataGridViewTextBoxColumn";
@@ -502,7 +497,6 @@
             // 
             // misiDataGridViewTextBoxColumn
             // 
-            this.misiDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.misiDataGridViewTextBoxColumn.DataPropertyName = "Misi";
             this.misiDataGridViewTextBoxColumn.HeaderText = "Misi";
             this.misiDataGridViewTextBoxColumn.Name = "misiDataGridViewTextBoxColumn";
@@ -525,11 +519,95 @@
             this.suaraDataGridViewTextBoxColumn.ReadOnly = true;
             this.suaraDataGridViewTextBoxColumn.Visible = false;
             // 
+            // kelasDataGridViewTextBoxColumn
+            // 
+            this.kelasDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.kelasDataGridViewTextBoxColumn.DataPropertyName = "Kelas";
+            this.kelasDataGridViewTextBoxColumn.HeaderText = "Kelas";
+            this.kelasDataGridViewTextBoxColumn.Name = "kelasDataGridViewTextBoxColumn";
+            this.kelasDataGridViewTextBoxColumn.ReadOnly = true;
+            this.kelasDataGridViewTextBoxColumn.Width = 63;
+            // 
+            // kandidatBindingSource
+            // 
+            this.kandidatBindingSource.DataMember = "kandidat";
+            this.kandidatBindingSource.DataSource = this.pilketosDataSet1;
+            // 
+            // pilketosDataSet1
+            // 
+            this.pilketosDataSet1.DataSetName = "pilketosDataSet1";
+            this.pilketosDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // kandidatTableAdapter
+            // 
+            this.kandidatTableAdapter.ClearBeforeFill = true;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel4.Location = new System.Drawing.Point(438, 225);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(190, 3);
+            this.panel4.TabIndex = 50;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Yu Gothic UI Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label7.Location = new System.Drawing.Point(365, 206);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(41, 20);
+            this.label7.TabIndex = 51;
+            this.label7.Text = "Kelas";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.Font = new System.Drawing.Font("Yu Gothic Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "10",
+            "11"});
+            this.comboBox1.Location = new System.Drawing.Point(438, 204);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(190, 22);
+            this.comboBox1.TabIndex = 0;
+            this.comboBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ComboBox1_KeyPress);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Yu Gothic Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label8.Location = new System.Drawing.Point(35, 581);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(60, 16);
+            this.label8.TabIndex = 53;
+            this.label8.Text = "KTI@2019";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::mari_memilih.Properties.Resources.kti;
+            this.pictureBox3.Location = new System.Drawing.Point(-1, 570);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(41, 43);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 52;
+            this.pictureBox3.TabStop = false;
+            // 
             // dataKandidat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1037, 608);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.panel8);
@@ -555,16 +633,17 @@
             this.Text = "dataKandidat";
             this.Load += new System.EventHandler(this.DataKandidat_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.PanelMenu.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.foto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pilketosDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kandidatBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pilketosDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -601,14 +680,20 @@
         private System.Windows.Forms.Button btnedit;
         private System.Windows.Forms.Button btnhapus;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private pilketosDataSet pilketosDataSet;
+        private pilketosDataSet1 pilketosDataSet1;
         private System.Windows.Forms.BindingSource kandidatBindingSource;
-        private pilketosDataSetTableAdapters.kandidatTableAdapter kandidatTableAdapter;
+        private pilketosDataSet1TableAdapters.kandidatTableAdapter kandidatTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn namaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn visiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn misiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewImageColumn fotoDataGridViewImageColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn suaraDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kelasDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

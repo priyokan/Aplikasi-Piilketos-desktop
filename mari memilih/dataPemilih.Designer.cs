@@ -43,24 +43,28 @@
             this.btndataPemilih = new System.Windows.Forms.Button();
             this.btnDataUSer = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.pilketosDataSet = new mari_memilih.pilketosDataSet();
-            this.pemilihBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pemilihTableAdapter = new mari_memilih.pilketosDataSetTableAdapters.PemilihTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kodePemilihDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pemilihBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pilketosDataSet = new mari_memilih.pilketosDataSet();
+            this.pemilihTableAdapter = new mari_memilih.pilketosDataSetTableAdapters.PemilihTableAdapter();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel8.SuspendLayout();
             this.PanelMenu.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pilketosDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pemilihBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pilketosDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
@@ -195,6 +199,7 @@
             this.BtndataKandidat.Text = "Data Kandidat";
             this.BtndataKandidat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtndataKandidat.UseVisualStyleBackColor = false;
+            this.BtndataKandidat.Click += new System.EventHandler(this.BtndataKandidat_Click);
             // 
             // btndataPemilih
             // 
@@ -211,6 +216,7 @@
             this.btndataPemilih.Text = "Data Pemilih";
             this.btndataPemilih.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btndataPemilih.UseVisualStyleBackColor = false;
+            this.btndataPemilih.Click += new System.EventHandler(this.BtndataPemilih_Click);
             // 
             // btnDataUSer
             // 
@@ -238,15 +244,6 @@
             this.panel3.Size = new System.Drawing.Size(261, 41);
             this.panel3.TabIndex = 2;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(-1, -1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1038, 41);
-            this.panel1.TabIndex = 27;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::mari_memilih.Properties.Resources.circled_chevron_left_50px;
@@ -257,6 +254,15 @@
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.PictureBox2_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Location = new System.Drawing.Point(-1, -1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1038, 41);
+            this.panel1.TabIndex = 27;
             // 
             // pictureBox1
             // 
@@ -300,20 +306,6 @@
             this.dataGridView2.TabIndex = 48;
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView2_CellClick);
             // 
-            // pilketosDataSet
-            // 
-            this.pilketosDataSet.DataSetName = "pilketosDataSet";
-            this.pilketosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // pemilihBindingSource
-            // 
-            this.pemilihBindingSource.DataMember = "Pemilih";
-            this.pemilihBindingSource.DataSource = this.pilketosDataSet;
-            // 
-            // pemilihTableAdapter
-            // 
-            this.pemilihTableAdapter.ClearBeforeFill = true;
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
@@ -331,11 +323,64 @@
             this.kodePemilihDataGridViewTextBoxColumn.Name = "kodePemilihDataGridViewTextBoxColumn";
             this.kodePemilihDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // pemilihBindingSource
+            // 
+            this.pemilihBindingSource.DataMember = "Pemilih";
+            this.pemilihBindingSource.DataSource = this.pilketosDataSet;
+            // 
+            // pilketosDataSet
+            // 
+            this.pilketosDataSet.DataSetName = "pilketosDataSet";
+            this.pilketosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // pemilihTableAdapter
+            // 
+            this.pemilihTableAdapter.ClearBeforeFill = true;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.SeaGreen;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.button1.Location = new System.Drawing.Point(718, 237);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(164, 29);
+            this.button1.TabIndex = 49;
+            this.button1.Text = "Print cuppon";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Yu Gothic Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label1.Location = new System.Drawing.Point(36, 579);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 16);
+            this.label1.TabIndex = 51;
+            this.label1.Text = "KTI@2019";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::mari_memilih.Properties.Resources.kti;
+            this.pictureBox3.Location = new System.Drawing.Point(0, 568);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(41, 43);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 50;
+            this.pictureBox3.TabStop = false;
+            // 
             // dataPemilih
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1021, 606);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.PanelMenu);
             this.Controls.Add(this.label6);
@@ -352,12 +397,13 @@
             this.panel8.PerformLayout();
             this.PanelMenu.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pilketosDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pemilihBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pilketosDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -387,5 +433,8 @@
         private pilketosDataSetTableAdapters.PemilihTableAdapter pemilihTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn kodePemilihDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

@@ -21,12 +21,30 @@ namespace mari_memilih
         {
 
         }
+        DataClasses1DataContext db = new DataClasses1DataContext();
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            WellcomeAdmin welcomead = new WellcomeAdmin();
-            welcomead.Show();
-            this.Hide();
+            var login = (from a in db.users
+                        where a.UserName == textBox1.Text
+                        && a.password == textBox2.Text
+                        select a).FirstOrDefault();
+
+            if (login != null)
+            {
+                WellcomeAdmin welcomead = new WellcomeAdmin();
+                welcomead.Show();
+                this.Hide();
+            }
+            else if (textBox1.Text == "" && textBox2.Text == "")
+            {
+                lblerror.Visible = true;
+                lblerror.Text = "Username dan Password harus di isi!";
+            }
+            else {
+                lblerror.Visible = true;
+                lblerror.Text = "Username atau Password salah!";
+            }
         }
         
         private void Button2_Click(object sender, EventArgs e)

@@ -334,6 +334,8 @@ namespace mari_memilih
 		
 		private int _Suara;
 		
+		private string _Kelas;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -350,6 +352,8 @@ namespace mari_memilih
     partial void OnFotoChanged();
     partial void OnSuaraChanging(int value);
     partial void OnSuaraChanged();
+    partial void OnKelasChanging(string value);
+    partial void OnKelasChanged();
     #endregion
 		
 		public kandidat()
@@ -473,6 +477,26 @@ namespace mari_memilih
 					this._Suara = value;
 					this.SendPropertyChanged("Suara");
 					this.OnSuaraChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Kelas", DbType="VarChar(50)")]
+		public string Kelas
+		{
+			get
+			{
+				return this._Kelas;
+			}
+			set
+			{
+				if ((this._Kelas != value))
+				{
+					this.OnKelasChanging(value);
+					this.SendPropertyChanging();
+					this._Kelas = value;
+					this.SendPropertyChanged("Kelas");
+					this.OnKelasChanged();
 				}
 			}
 		}

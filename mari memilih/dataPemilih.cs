@@ -114,5 +114,21 @@ namespace mari_memilih
             this.Close();
 
         }
+
+        private void BtndataPemilih_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtndataKandidat_Click(object sender, EventArgs e)
+        {
+            dataKandidat dakand = new dataKandidat();
+            dakand.Show();
+            this.Close();
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+        }
     }
 }
